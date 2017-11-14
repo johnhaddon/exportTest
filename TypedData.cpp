@@ -33,4 +33,4 @@ typename TypedData<int>::ValueType &TypedData<int>::writable()
 
 // Explicitly instantiate the template, specifying that is is
 // visible as part of the API.
-template class EXPORTTEST_API ExportTest::TypedData<int>;
+template class ExportTest::TypedData<int>;

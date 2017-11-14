@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include "Export.h"
+
 namespace ExportTest
 {
 
@@ -10,7 +12,7 @@ namespace ExportTest
 // will instantiate it with different types, and we want
 // each library to export the symbols for its own instantiations.
 template<typename T>
-class TypedData
+class EXPORTTEST_EXPORT TypedData
 {
 
 	public :

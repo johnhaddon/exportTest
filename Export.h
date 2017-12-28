@@ -8,7 +8,7 @@
   #define EXPORTTEST_EXPORT __attribute__((visibility("default")))
 #endif
 
-#ifdef ExportTest_EXPORTS
+#ifdef ExportTestLib_EXPORTS
   #define EXPORTTEST_API EXPORTTEST_EXPORT
 #else
   #define EXPORTTEST_API EXPORTTEST_IMPORT

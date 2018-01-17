@@ -21,9 +21,9 @@ typename TypedData<T>::ValueType &TypedData<T>::writable()
 // is the crux of our problem. If we define this specialisation,
 // then GCC won't export our symbols any more.
 template<>
-typename TypedData<int>::ValueType &TypedData<int>::writable()
+typename TypedData<MapType>::ValueType &TypedData<MapType>::writable()
 {
-	m_value = { 10 };
+	m_value.clear();
 	return m_value;
 }
 
@@ -33,4 +33,4 @@ typename TypedData<int>::ValueType &TypedData<int>::writable()
 
 // Explicitly instantiate the template, specifying that is is
 // visible as part of the API.
-template class ExportTest::TypedData<int>;
+template class ExportTest::TypedData<ExportTest::MapType>;

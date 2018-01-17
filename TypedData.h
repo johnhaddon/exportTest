@@ -1,11 +1,15 @@
 #pragma once
 
 #include <vector>
+#include <map>
 
 #include "Export.h"
+#include "RefCounted.h"
 
 namespace ExportTest
 {
+
+typedef std::map<int, RefCountedPtr> MapType;
 
 // We don't want to provide any visibility attributes for
 // the template class itself, because different libraries
@@ -17,7 +21,7 @@ class EXPORTTEST_EXPORT TypedData
 
 	public :
 
-		typedef std::vector<T> ValueType;
+		typedef T ValueType;
 
 		ValueType &writable();
 
@@ -27,6 +31,6 @@ class EXPORTTEST_EXPORT TypedData
 
 };
 
-typedef TypedData<int> IntTypedData;
+typedef TypedData<MapType> MapTypedData;
 
 };

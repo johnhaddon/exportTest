@@ -4,7 +4,7 @@ using namespace ExportTest;
 
 int main()
 {
-	IntTypedData *i = new IntTypedData;
+	MapTypedData *i = new MapTypedData;
 	i->writable();
 	return 0;
 }

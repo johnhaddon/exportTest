@@ -37,12 +37,15 @@
 
 #include "tbb/atomic.h"
 
-#include "boost/intrusive_ptr.hpp"
-
 #include "Export.h"
 
 #include "boost/noncopyable.hpp"
+
+EXPORTTEST_PUSH_DEFAULT_VISIBILITY
+
 #include "boost/intrusive_ptr.hpp"
+
+EXPORTTEST_POP_DEFAULT_VISIBILITY
 
 namespace ExportTest
 {
